@@ -1,14 +1,19 @@
 // complete the given function
-
 function palindrome(str){
-  var one = str.replace (/[^A-Z0-9]/ig , "").toLowerCase();
-
-   var two = one.split('').reverse.join('');
-
-   if(one == two){
-    return true;
-   }else {
-    return false;
+    var removeChar = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+   
+     /* reverse removeChar for comparison*/
+     var checkPalindrome = removeChar.split('').reverse().join('');
+   
+     /* Check to see if str is a Palindrome*/
+      if(removeChar === checkPalindrome){
+        return true;
+      }else{
+        return false;
+      }
    }
-}
-module.exports = palindrome
+
+module.exports = palindrome();
+
+
+   
